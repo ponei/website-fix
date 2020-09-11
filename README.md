@@ -9,7 +9,7 @@ tampermonkey scripts to fix websites
 * adicione o script no tampermonkey
 * entre no site desejado e ative o script
 
-## us-en
+## en-us
 ### how to install?
 * install [tampermonkey](https://www.tampermonkey.net/)
 * click on any script on the repository above
