@@ -27,6 +27,7 @@ setInterval(function() {
     document.body.style.position = null;
     //main warn
     removeById("detecta-adblock");
+    removeById("cookie-banner-lgpd");
 }, 1000);
 
 
@@ -41,4 +42,3 @@ function removeById(id){
 function logRemove(el) {
     console.log(`[ponei] removing ${el.outerHTML.split('>')[0]}>...`);
 }
-
