@@ -2,7 +2,7 @@
 // @id             Ulbra AVA Bypass
 // @name           Ulbra AVA Bypass
 // @namespace      ulbra.ava.bypass
-// @version        1.1
+// @version        1.2
 // @author         ponei
 // @include        http*://servicos.ulbra.br/ava/*
 // @run-at         document-start
@@ -22,12 +22,15 @@ document.onreadystatechange = function () {
         modif.type = "text/javascript";
         modif.innerHTML = `xhook.after(function(request, response) {
 if (request.url.includes("executarFuncaoNoApex")) {
+let jAtiv = JSON.parse(response.data);
 if (request.body.includes("roteiroItemTelaApresentacao") || request.body.includes("montaQuestionario")) {
+if (jAtiv.data.data_entrega == undefined) {
 if (response.data.includes(\`"permite_realizar":"N"\`)) {
 logBypass("atividade encerrada encontrada");
 response.data = response.data.replace(\`"permite_realizar":"N"\`,\`"permite_realizar":"S"\`);
 logBypass("permitindo finalização");
 alert("finalização permitida");
+}
 }
 }
 }
