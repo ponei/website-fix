@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Brainly Bypass
-// @id         Brainly Bypass
+// @id           Brainly Bypass
 // @version      1.0
 // @author       ponei
 // @namespace    brainly.bypass
